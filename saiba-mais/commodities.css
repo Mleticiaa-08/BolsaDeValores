@@ -1,5 +1,5 @@
 .img {
-    background-image: url('../img/img.commodities.jpg');
+    background-image: url('../img/fundo.azul.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -11,6 +11,23 @@
     z-index: -1;
 }
 
+.texto {
+    color: #fff;
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+    max-width: 90%;
+    margin: auto;
+}
+
+@media (max-width: 768px) {
+    .texto {
+        font-size: 14px;
+        padding: 15px;
+    }
+}
+
 .texto h1 {
     font-size: 40px; 
     font-weight: 800; 
@@ -18,23 +35,133 @@
     background: linear-gradient(45deg, #f3d50f, #ff8450);
     -webkit-background-clip: text; 
     -webkit-text-fill-color: transparent; 
-    text-shadow: 4px 40px 10px rgba(0, 0, 0, 0.7); 
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7); 
     font-family: 'Poppins', sans-serif; 
     text-align: center; 
     margin-top: 30px;
     animation: glow 1.8s infinite alternate; 
 }
 
+@keyframes glow {
+    from{
+        text-shadow: 4px 4px 10px rgba(117, 145, 248, 0.8);
+    }
+    to{
+        text-shadow: 4px 4px 20px rgb(235, 204, 4);
+    }
+}
+
+@media (max-width: 768px) {
+    .texto h1 {
+        font-size: 32px;
+        letter-spacing: 2px;
+    }
+}
 
 .texto p {
     background: rgba(0, 0, 0, 0.5);
     border-radius: 0 0 12px 12px;
-    font-size: 16px; 
-    font-weight: 599rem; 
+    font-size: 18px; 
+    font-weight: 400; 
     color: #f0f0f0; 
     font-family: 'Open Sans', sans-serif; 
     line-height: 1.6; 
     text-align: justify; 
     margin: 0 15px 20px; 
     padding: 15px; 
+}
+
+.saiba-mais {
+    display: block;
+    width: 200px;
+    margin: 30px auto 50px;
+    text-align: center;
+    background: #ffdd00;
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 12px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: 0.3;
+}
+
+.saiba-mais:hover {
+    background: #ffc400;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .texto h2{
+        font-size: 22px;
+        padding: 12px;
+    }
+
+    .texto h2+p {
+        font-size: 16px; 
+        padding: 12px;
+    }
+
+    .saiba-mais {
+        font-size: 16px;
+        padding: 10px;
+        width: 180px;
+    }
+}
+
+.image-square img {
+    width: 95px; /* Defina um tamanho fixo para todas as imagens */
+    height: 95px; /* Mantém todas do mesmo tamanho */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    border-radius: 8px; /* Opcional: arredonda as bordas */
+}
+.image-square {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.image-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.image-container {
+    text-align: center;
+    flex: 1;
+    max-width: 100px; /* Controla o tamanho da imagem */
+}
+
+.image-container p {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Ajuste para telas menores */
+@media (max-width: 600px) {
+    .image-row {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .image-container {
+        max-width: 90px; /* Mantém tamanho proporcional */
+    }
+
+    .image-container img {
+        max-width: 100%;
+    }
 }
