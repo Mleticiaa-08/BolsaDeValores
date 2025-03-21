@@ -1,3 +1,9 @@
+/* Geral */
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
 .img {
     background-image: url('../img/fundo.azul.jpg');
     background-size: cover;
@@ -21,13 +27,6 @@
     margin: auto;
 }
 
-@media (max-width: 768px) {
-    .texto {
-        font-size: 14px;
-        padding: 15px;
-    }
-}
-
 .texto h1 {
     font-size: 40px; 
     font-weight: 800; 
@@ -43,18 +42,11 @@
 }
 
 @keyframes glow {
-    from{
+    from {
         text-shadow: 4px 4px 10px rgba(117, 145, 248, 0.8);
     }
-    to{
+    to {
         text-shadow: 4px 4px 20px rgb(235, 204, 4);
-    }
-}
-
-@media (max-width: 768px) {
-    .texto h1 {
-        font-size: 32px;
-        letter-spacing: 2px;
     }
 }
 
@@ -71,6 +63,7 @@
     padding: 15px; 
 }
 
+/* Botão Saiba Mais */
 .saiba-mais {
     display: block;
     width: 200px;
@@ -92,30 +85,7 @@
     transform: scale(1.05);
 }
 
-@media (max-width: 768px) {
-    .texto h2{
-        font-size: 22px;
-        padding: 12px;
-    }
-
-    .texto h2+p {
-        font-size: 16px; 
-        padding: 12px;
-    }
-
-    .saiba-mais {
-        font-size: 16px;
-        padding: 10px;
-        width: 180px;
-    }
-}
-
-.image-square img {
-    width: 95px; /* Defina um tamanho fixo para todas as imagens */
-    height: 95px; /* Mantém todas do mesmo tamanho */
-    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
-    border-radius: 8px; /* Opcional: arredonda as bordas */
-}
+/* Imagens */
 .image-square {
     display: flex;
     flex-direction: column;
@@ -133,35 +103,103 @@
 
 .image-container {
     text-align: center;
-    flex: 1;
-    max-width: 100px; /* Controla o tamanho da imagem */
+    flex: 1 1 30%; 
+    max-width: 120px;
+    position: relative;
+    height: 100%;
 }
 
 .image-container p {
-    font-size: 14px;
-    font-weight: bold;
-    margin-bottom: 5px;
+    font-size: 16px; 
+    font-weight: bold; 
+    margin-bottom: 5px; 
+    color: #000000; 
+    margin: 0; 
+    background: none;
 }
 
 .image-container img {
     width: 100%;
-    height: auto;
+    height: 100px;
     object-fit: cover;
     border-radius: 8px;
+    transition: transform 0.3s ease;
 }
 
-/* Ajuste para telas menores */
-@media (max-width: 600px) {
-    .image-row {
-        display: flex;
-        justify-content: space-around;
+.image-container img:hover {
+    transform: scale(1.1);
+}
+
+/* Vantagens */
+.vantagens {
+    background-color: #f8f8f8;
+    color: #333;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.vantagens h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.vantagens ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.vantagens li {
+    font-size: 18px;
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.vantagens li strong {
+    font-weight: 700;
+    color: #ff8c00;
+}
+
+/* Navegação */
+.navegacao {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+
+.nav-btn {
+    background-color: #ff8c00;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-btn:hover {
+    background-color: #e07b00;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .texto h1 {
+        font-size: 32px;
     }
 
-    .image-container {
-        max-width: 90px; /* Mantém tamanho proporcional */
+    .texto h2 {
+        font-size: 22px;
     }
 
-    .image-container img {
-        max-width: 100%;
+    .image-container p {
+        font-size: 14px;
+    }
+
+    .nav-btn {
+        font-size: 16px;
+        padding: 8px 16px;
     }
 }
