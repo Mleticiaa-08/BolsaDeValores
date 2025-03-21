@@ -70,14 +70,14 @@ body {
     margin-top: 30px;
 }
 
-.bolsas {
+.mecanismos {
     display: flex;
     flex-direction: column;
     gap: 20px;
     padding: 20px;
 }
 
-.bolsa {
+.processo {
     background-color: #f8f8f8;
     padding: 15px;
     border-radius: 8px;
@@ -85,26 +85,26 @@ body {
     text-align: left;
 }
 
-.bolsa h3 {
+.processo h3 {
     font-size: 24px;
     font-weight: 700;
     color: #333;
     margin-bottom: 10px;
 }
 
-.bolsa p {
+.processo p {
     font-size: 18px;
     line-height: 1.6;
     color: #555;
 }
 
-.impacto {
+.importancia {
     list-style: none;
     padding: 0;
     margin-top: 20px;
 }
 
-.impacto li {
+.importancia li {
     background-color: #00d09c;
     color: #000;
     padding: 10px;
@@ -149,7 +149,7 @@ body {
         padding: 15px;
     }
 
-    .bolsas {
+    .mecanismos {
         padding: 15px;
     }
 
@@ -161,11 +161,11 @@ body {
 }
 
 @media (max-width: 600px) {
-    .bolsa h3 {
+    .processo h3 {
         font-size: 20px;
     }
 
-    .bolsa p {
+    .processo p {
         font-size: 16px;
     }
 }
