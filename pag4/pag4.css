@@ -49,22 +49,58 @@ body {
     }
 }
 
-.texto p {
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 0 0 12px 12px;
-    font-size: 18px; 
-    font-weight: 400; 
-    color: #f0f0f0; 
-    font-family: 'Open Sans', sans-serif; 
-    line-height: 1.6; 
-    text-align: justify; 
-    margin: 0 15px 20px; 
-    padding: 15px; 
+.texto {
+    color: #000000;
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+    max-width: 90%;
+    margin: auto;
 }
 
-/* Botão Saiba Mais */
-.saiba-mais {
-    display: block;
+.texto h1 {
+    font-size: 40px;
+    font-weight: 800;
+    text-transform: uppercase;
+    background: linear-gradient(45deg, #f3d50f, #ff8450);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7);
+    font-family: 'Poppins', sans-serif;
+    margin-top: 30px;
+}
+
+.impactos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.impacto {
+    background-color: #f8f8f8;
+    padding: 15px;
+    border-radius: 8px;
+    color: #333;
+    text-align: left;
+}
+
+.impacto h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.impacto p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.botao-pagina {
+    display: inline-block;
     width: 200px;
     margin: 30px auto 50px;
     text-align: center;
@@ -79,87 +115,45 @@ body {
     transition: 0.3;
 }
 
-.saiba-mais:hover {
+.botao-pagina:hover {
     background: #ffc400;
     transform: scale(1.05);
 }
 
-/* Imagens */
-.image-square {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    width: 100%;
+.anterior {
+    margin-right: 20px;
 }
 
-.image-row {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    width: 100%;
+.proxima {
+    margin-left: 20px;
 }
 
-.image-container {
-    text-align: center;
-    flex: 1 1 30%; 
-    max-width: 120px;
-    position: relative;
-    height: 100%;
+/* Ajustes para mobile */
+@media (max-width: 768px) {
+    .texto {
+        font-size: 14px;
+        padding: 15px;
+    }
+
+    .impactos {
+        padding: 15px;
+    }
+
+    .botao-pagina {
+        font-size: 16px;
+        padding: 10px;
+        width: 180px;
+    }
 }
 
-.image-container p {
-    font-size: 16px; 
-    font-weight: bold; 
-    margin-bottom: 5px; 
-    color: #000000; 
-    margin: 0; 
-    background: none;
-}
+@media (max-width: 600px) {
+    .impacto h2 {
+        font-size: 20px;
+    }
 
-.image-container img {
-    width: 100%;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-}
-
-.image-container img:hover {
-    transform: scale(1.1);
-}
-
-/* Vantagens */
-.vantagens {
-    background-color: #f8f8f8;
-    color: #333;
-    padding: 20px;
-    margin-top: 30px;
-    border-radius: 8px;
-    text-align: left;
-}
-
-.vantagens h2 {
-    font-size: 28px;
-    font-weight: 700;
-    color: #333;
-    margin-bottom: 15px;
-}
-
-.vantagens ul {
-    list-style-type: none;
-    padding-left: 20px;
-}
-
-.vantagens li {
-    font-size: 18px;
-    margin: 10px 0;
-    line-height: 1.6;
-}
-
-.vantagens li strong {
-    font-weight: 700;
-    color: #ff8c00;
+    .impacto p {
+        font-size: 16px;
+    }
 }
 
 .navegacao {
@@ -182,7 +176,6 @@ body {
     background-color: #e07b00;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
     .texto h1 {
         font-size: 32px;
